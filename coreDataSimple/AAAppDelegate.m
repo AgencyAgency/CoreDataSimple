@@ -7,21 +7,28 @@
 //
 
 #import "AAAppDelegate.h"
+#import "AAViewController.h"
+#import "State+Create.h"
 
 @implementation AAAppDelegate
 
+- (void)loadStateData
+{
+    // load state here.
+    [State createStateWithName:@"Hawai‘i" population:1404054 managedObjectContext:self.managedObjectContext];
+    [State createStateWithName:@"Alaska" population:735132 managedObjectContext:self.managedObjectContext];
+    [State createStateWithName:@"Alabama" population:4833722 managedObjectContext:self.managedObjectContext];
+}
+
 - (void)documentIsReady
 {
+    NSLog(@"doc is ready");
     if (self.document.documentState == UIDocumentStateNormal) {
         self.managedObjectContext = self.document.managedObjectContext;
-//        [AAScheduleLoader loadScheduleDataWithContext:self.managedObjectContext];
-        //        [AATeacherLoader loadTeacherDataWithContext:self.managedObjectContext];
+        [self loadStateData];
         
-//        AASchoolDayCDTVC *vc = (AASchoolDayCDTVC *)[self initialVC];
-//        if ([vc isKindOfClass:[AASchoolDayCDTVC class]]) {
-//            vc.managedObjectContext = self.managedObjectContext;
-//            [vc selectToday];
-//        }
+        AAViewController *vc = (AAViewController *)self.window.rootViewController;
+        vc.context = self.managedObjectContext;
     }
 }
 
@@ -82,6 +89,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self closeManagedDocument];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -97,6 +105,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [self closeManagedDocument];
 }
 
 @end

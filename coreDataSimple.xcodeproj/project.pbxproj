@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF57AD4E190097DE00809861 /* State+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57AD4D190097DE00809861 /* State+Create.m */; };
 		CF96991D19008F63006FA5E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF96991C19008F63006FA5E4 /* Foundation.framework */; };
 		CF96991F19008F63006FA5E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF96991E19008F63006FA5E4 /* CoreGraphics.framework */; };
 		CF96992119008F63006FA5E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF96992019008F63006FA5E4 /* UIKit.framework */; };
@@ -21,6 +22,9 @@
 		CF96993E19008F63006FA5E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF96992019008F63006FA5E4 /* UIKit.framework */; };
 		CF96994619008F63006FA5E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF96994419008F63006FA5E4 /* InfoPlist.strings */; };
 		CF96994819008F63006FA5E4 /* coreDataSimpleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96994719008F63006FA5E4 /* coreDataSimpleTests.m */; };
+		CF9699531900934F006FA5E4 /* StateModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF9699511900934F006FA5E4 /* StateModel.xcdatamodeld */; };
+		CF96995619009446006FA5E4 /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96995519009446006FA5E4 /* State.m */; };
+		CF96995819009659006FA5E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF96995719009659006FA5E4 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF57AD4C190097DE00809861 /* State+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "State+Create.h"; sourceTree = "<group>"; };
+		CF57AD4D190097DE00809861 /* State+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "State+Create.m"; sourceTree = "<group>"; };
 		CF96991919008F63006FA5E4 /* coreDataSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coreDataSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF96991C19008F63006FA5E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF96991E19008F63006FA5E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,10 @@
 		CF96994319008F63006FA5E4 /* coreDataSimpleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "coreDataSimpleTests-Info.plist"; sourceTree = "<group>"; };
 		CF96994519008F63006FA5E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF96994719008F63006FA5E4 /* coreDataSimpleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coreDataSimpleTests.m; sourceTree = "<group>"; };
+		CF9699521900934F006FA5E4 /* StateModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StateModel.xcdatamodel; sourceTree = "<group>"; };
+		CF96995419009446006FA5E4 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		CF96995519009446006FA5E4 /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = State.m; sourceTree = "<group>"; };
+		CF96995719009659006FA5E4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF96995819009659006FA5E4 /* CoreData.framework in Frameworks */,
 				CF96991F19008F63006FA5E4 /* CoreGraphics.framework in Frameworks */,
 				CF96992119008F63006FA5E4 /* UIKit.framework in Frameworks */,
 				CF96991D19008F63006FA5E4 /* Foundation.framework in Frameworks */,
@@ -101,6 +112,7 @@
 		CF96991B19008F63006FA5E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF96995719009659006FA5E4 /* CoreData.framework */,
 				CF96991C19008F63006FA5E4 /* Foundation.framework */,
 				CF96991E19008F63006FA5E4 /* CoreGraphics.framework */,
 				CF96992019008F63006FA5E4 /* UIKit.framework */,
@@ -114,6 +126,11 @@
 			children = (
 				CF96992B19008F63006FA5E4 /* AAAppDelegate.h */,
 				CF96992C19008F63006FA5E4 /* AAAppDelegate.m */,
+				CF9699511900934F006FA5E4 /* StateModel.xcdatamodeld */,
+				CF96995419009446006FA5E4 /* State.h */,
+				CF96995519009446006FA5E4 /* State.m */,
+				CF57AD4C190097DE00809861 /* State+Create.h */,
+				CF57AD4D190097DE00809861 /* State+Create.m */,
 				CF96992E19008F63006FA5E4 /* Main.storyboard */,
 				CF96993119008F63006FA5E4 /* AAViewController.h */,
 				CF96993219008F63006FA5E4 /* AAViewController.m */,
@@ -251,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF96992D19008F63006FA5E4 /* AAAppDelegate.m in Sources */,
+				CF96995619009446006FA5E4 /* State.m in Sources */,
+				CF9699531900934F006FA5E4 /* StateModel.xcdatamodeld in Sources */,
 				CF96993319008F63006FA5E4 /* AAViewController.m in Sources */,
 				CF96992919008F63006FA5E4 /* main.m in Sources */,
+				CF57AD4E190097DE00809861 /* State+Create.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +479,7 @@
 				CF96994D19008F63006FA5E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF96994E19008F63006FA5E4 /* Build configuration list for PBXNativeTarget "coreDataSimpleTests" */ = {
 			isa = XCConfigurationList;
@@ -467,8 +488,22 @@
 				CF96995019008F63006FA5E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF9699511900934F006FA5E4 /* StateModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF9699521900934F006FA5E4 /* StateModel.xcdatamodel */,
+			);
+			currentVersion = CF9699521900934F006FA5E4 /* StateModel.xcdatamodel */;
+			path = StateModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CF96991119008F63006FA5E4 /* Project object */;
 }

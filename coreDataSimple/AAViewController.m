@@ -9,10 +9,18 @@
 #import "AAViewController.h"
 
 @interface AAViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *stateTableView;
 
 @end
 
 @implementation AAViewController
+
+- (void)setContext:(NSManagedObjectContext *)context
+{
+    _context = context;
+    NSLog(@"context set!");
+}
+
 
 - (void)viewDidLoad
 {
@@ -20,10 +28,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    
+//}
 
 @end
