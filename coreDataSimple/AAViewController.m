@@ -7,10 +7,11 @@
 //
 
 #import "AAViewController.h"
+#import "State+Create.h"
 
 @interface AAViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *stateTableView;
-
+@property (nonatomic, strong) NSArray *states;
 @end
 
 @implementation AAViewController
@@ -19,6 +20,8 @@
 {
     _context = context;
     NSLog(@"context set!");
+    self.states = [State allStatesInManagedObjectContext:self.context];
+    [self.stateTableView reloadData];
 }
 
 
@@ -28,14 +31,19 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"State Cell" forIndexPath:indexPath];
+    State *state = (State *)self.states[indexPath.row];
+    NSLog(@"%@", state);
+    cell.textLabel.text = [[state name] description];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Pop: %i", [state.population intValue]];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.states count];
+}
 
 @end
