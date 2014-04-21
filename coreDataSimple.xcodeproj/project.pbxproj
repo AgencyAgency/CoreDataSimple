@@ -90,6 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF6376531905DC680037B4A3 /* DataStuff */ = {
+			isa = PBXGroup;
+			children = (
+				CF6376581905DD8C0037B4A3 /* Customized */,
+				CF6376571905DD810037B4A3 /* AutoGen */,
+				CF9699511900934F006FA5E4 /* StateModel.xcdatamodeld */,
+			);
+			name = DataStuff;
+			sourceTree = "<group>";
+		};
+		CF6376571905DD810037B4A3 /* AutoGen */ = {
+			isa = PBXGroup;
+			children = (
+				CF96995419009446006FA5E4 /* State.h */,
+				CF96995519009446006FA5E4 /* State.m */,
+			);
+			name = AutoGen;
+			sourceTree = "<group>";
+		};
+		CF6376581905DD8C0037B4A3 /* Customized */ = {
+			isa = PBXGroup;
+			children = (
+				CF57AD4C190097DE00809861 /* State+Create.h */,
+				CF57AD4D190097DE00809861 /* State+Create.m */,
+			);
+			name = Customized;
+			sourceTree = "<group>";
+		};
 		CF96991019008F63006FA5E4 = {
 			isa = PBXGroup;
 			children = (
@@ -124,13 +152,9 @@
 		CF96992219008F63006FA5E4 /* coreDataSimple */ = {
 			isa = PBXGroup;
 			children = (
+				CF6376531905DC680037B4A3 /* DataStuff */,
 				CF96992B19008F63006FA5E4 /* AAAppDelegate.h */,
 				CF96992C19008F63006FA5E4 /* AAAppDelegate.m */,
-				CF9699511900934F006FA5E4 /* StateModel.xcdatamodeld */,
-				CF96995419009446006FA5E4 /* State.h */,
-				CF96995519009446006FA5E4 /* State.m */,
-				CF57AD4C190097DE00809861 /* State+Create.h */,
-				CF57AD4D190097DE00809861 /* State+Create.m */,
 				CF96992E19008F63006FA5E4 /* Main.storyboard */,
 				CF96993119008F63006FA5E4 /* AAViewController.h */,
 				CF96993219008F63006FA5E4 /* AAViewController.m */,

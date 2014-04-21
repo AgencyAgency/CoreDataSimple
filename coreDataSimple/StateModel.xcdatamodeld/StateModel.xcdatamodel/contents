@@ -5,6 +5,6 @@
         <attribute name="population" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="State" positionX="-8343" positionY="-4275" width="128" height="75"/>
+        <element name="State" positionX="-13565" positionY="-12324" width="128" height="75"/>
     </elements>
 </model>

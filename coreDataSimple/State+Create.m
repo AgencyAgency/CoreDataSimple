@@ -24,7 +24,7 @@
             // handle error
             NSAssert(NO, @"wrong number of period matches returned.");
             
-        } else if (![matches count]) {
+        } else if ([matches count] == 0) {
             NSLog(@"Creating new State: %@", name);
             state = [NSEntityDescription insertNewObjectForEntityForName:@"State"
                                                    inManagedObjectContext:managedObjectContext];
@@ -52,7 +52,7 @@
         NSAssert(NO, @"wrong number of school day matches returned.");
         
     } else {
-        NSLog(@"school days loaded: %lu", (unsigned long)[matches count]);
+        NSLog(@"states loaded: %lu", (unsigned long)[matches count]);
         states = matches;
     }
     
